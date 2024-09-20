@@ -74,33 +74,20 @@ export default function ItemList() {
       };
 
     return (
-        <main style={{ 
-            padding: "20px",
-            backgroundColor: "black",
-            display: "flex",
-            justifyContent: "center" }}>
-            <ul style={{ 
-                listStyleType: "none", 
-                padding: 0, 
-                maxWidth: "600px", 
-                width: "100%" }}>
-                {[item1, item2, item3, 
-                item4, item5, item6, 
-                item7, item8, item9, 
-                item10, item11, item12].map((item, index) => (
-                    <li key={index} style={{ 
-                        backgroundColor: "#fff",
-                        padding: "15px",
-                        borderRadius: "8px",
-                        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                        marginBottom: "10px" }}>
-                        <div style={{ marginBottom: "10px" }}>What: {item.name}</div>
-                        <div style={{ marginBottom: "10px" }}>How many: {item.quantity}</div>
-                        <div>Where: {item.category}</div>
-                    </li>
-                ))}
+        <main className="p-5 bg-black flex justify-center">
+            <ul className="list-none p-0 max-w-xl w-full">
+            {[item1, item2, item3, 
+            item4, item5, item6, 
+            item7, item8, item9, 
+            item10, item11, item12].map((item, index) => (
+                <li key={index} className="bg-white p-4 rounded-lg shadow-md mb-2.5">
+                <div className="mb-2.5">What: {item.name}</div>
+                <div className="mb-2.5">How many: {item.quantity}</div>
+                <div>Where: {item.category}</div>
+                </li>
+            ))}
             </ul>
         </main>
-    );
+        );
 
 }
