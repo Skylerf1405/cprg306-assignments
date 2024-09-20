@@ -2,10 +2,13 @@ import Link from "next/link";
 
 
 export default function Home() {
+
+  let linkStyles = "underline text-cyan-600 hover:text-black";
   return (
     <main>
       <h1>CPRG 306: Web Development 2 - Assignments</h1>
-      <Link href="./week-2/">Week-2</Link>
+      <li><Link href="./week-2/" className={linkStyles}>Week-2</Link></li>
+      <li><Link href="./week-3/" className={linkStyles}>Week-3</Link></li>
       
     </main>
   );
